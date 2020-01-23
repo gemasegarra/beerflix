@@ -10,9 +10,49 @@
   <title>Beerflix</title>
 </head>
 
-<body>
+<body> 
 
-  <script type="module" src="/src/js/navbar.js"></script>
+   
+<div class="navbar">
+  <div class="intro"><a class="title" href="#" aria-label="home link">BeerFlix 🍺</a>
+  <div class="logo">Find your favourite beer!</div></div>
+      
+    </div>      
+      <div class="header">
+        <picture>
+          <source
+            srcset="
+              320.jpg 320w,
+             768.jpg 768w,
+            "
+            media="(min-width: 768px)"
+          >
+          <source
+            srcset="
+              500.jpg
+            "
+            media="(min-width: 320px)"
+          >
+          <img src="100.jpg" alt="beer">
+        </picture>
+</div>
+<div class="search-bar">
+      <form id="search-box" novalidate>
+        <input type="search" id="search-beer" data-pattern-mismatch="Invalid input" required placeholder="Search beer..." class="search-bar"
+          aria-label="search bar">
+          <button type="submit" class="button">Search</button>
+      </form>
+      <form id="filter-box" novalidate> 
+        <input type="number" id="filter" data-pattern-mismatch="Invalid input"require placeholdeR="Filter beers by year" class="filter-bar"/>
+        <button type="submit" class="button">Filter</button>
+<input type="number" id="firstBrewed"></form>
+    </div>  
+    
+    
+<div id="beerlist" class='row'></div>
+
+
+  <script type="module" src='/src/js/navbar.js'></script>
 
 </body>
 
