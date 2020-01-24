@@ -13,11 +13,11 @@ const beerTemplate = beer => {
     <h1 class="title-section" id="beer-name">${beer.name}</h1>
     <p class="description">${beer.description}</p>
     <p class="year">First brewed: ${beer.firstBrewed}</p>
+    <p class="show-more-info">For more info click <a href="/detail/${beer.beerId}"> here!</a></p>
   </div>
 </div>
 </div>
-</div>` 
-};
+`};
 
 // add heart button 
 // add link to detailed page
@@ -34,7 +34,7 @@ const renderBeersDOM = async text => {
     const beers = await getBeers(text);
     const beerSection = document.querySelector('#beerlist')
     renderBeers(beerSection, beers)
-  } catch (err){
+  } catch (err) {
     console.log(err)
   }
 };
