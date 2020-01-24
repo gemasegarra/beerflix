@@ -1,0 +1,32 @@
+img {
+  max-width: 100%;
+  width: 100%;
+  height: 80%;
+}
+
+.bar {
+display: flex;
+align-items: center;
+justify-content: center;
+background:#fddb3a;
+padding: 0 30px;
+height: 100px;
+}
+header {
+background:#d5c455;
+}
+
+
+.logo {
+font-size: 3rem;
+font-family: 'Anton', sans-serif;
+display: flex;
+margin-right: auto;
+color: black;
+
+}
+.title {
+font-size: 2.5rem;
+font-family: 'Anton', sans-serif;
+
+}
