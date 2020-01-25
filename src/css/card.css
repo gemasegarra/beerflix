@@ -87,12 +87,12 @@ a:visited {
 @media (min-width: 992px) {
   .row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     -webkit-column-gap: 40px;
     -moz-column-gap: 40px;
     column-gap: 40px;
     margin: auto;
-    width: 80%;
+    width: 90%;
   }
 
   .beer-card,
