@@ -44,14 +44,6 @@ To run this project locally do the following:
 - Web accessibility and performance improvements
 - Design improvements
 
-## Installing
-
-To run this project locally do the following:
-
-1. Clone the project 
-2. run `npm install` to install all the dependencies
-3. run `npm start` to start server on http://localhost:3000/
-
 ## Built with 
 
 Javascript, HTML, CSS, Page.js & Express
