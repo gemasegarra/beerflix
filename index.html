@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src='https://kit.fontawesome.com/102a8e9465.js' crossorigin='anonymous'></script>
-  <link rel="stylesheet" href="./src/css/styles.css">
+  <link rel="stylesheet" href="/src/css/styles.css"> 
+  <link href="https://fonts.googleapis.com/css?family=Anton|Roboto+Condensed&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="./src/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./src/images/favicon/favicon-16x16.png">
   <title>Beerflix</title>
 </head>
 
-<body> 
+<body>
 
-   
-<div class="navbar">
-  <div class="intro"><a class="title" href="#" aria-label="home link">BeerFlix 🍺</a>
-  <div class="logo">Find your favourite beer!</div></div>
-      
-    </div>      
-      <div class="header">
-        <picture>
-          <source
-            srcset="
-              320.jpg 320w,
-             768.jpg 768w,
-            "
-            media="(min-width: 768px)"
-          >
-          <source
-            srcset="
-              500.jpg
-            "
-            media="(min-width: 320px)"
-          >
-          <img src="100.jpg" alt="beer">
-        </picture>
-</div>
-<div class="search-bar">
-      <form id="search-box" novalidate>
-        <input type="search" id="search-beer" data-pattern-mismatch="Invalid input" required placeholder="Search beer..." class="search-bar"
-          aria-label="search bar">
-          <button type="submit" class="button">Search</button>
-      </form>
-      <form id="filter-box" novalidate> 
-        <input type="number" id="filter" data-pattern-mismatch="Invalid input"require placeholdeR="Filter beers by year" class="filter-bar"/>
-        <button type="submit" class="button">Filter</button>
-<input type="number" id="firstBrewed"></form>
-    </div>  
-    
-    
-<div id="beerlist" class='row'></div>
+  <header>
+    <div class="bar">
+      <a class="logo" href="/" aria-label="home link">BeerFlix 🍺</a>
+      <div class="title">Find your favourite beer!</div>
 
+    </div>
+    <picture>
+      <source srcset="
+            src/images/320.jpg 320w,
+            src/images/768.jpg 768w,
+            src/images/1280.jpg 1280w,
+            " media="(min-width: 768px)">
+      <source srcset="
+              src/images/500.jpg
+            " media="(min-width: 320px)">
+      <img src="src/images/100.jpg" alt="beer">
+    </picture>
+  </header>
+  <div class="search-bar">
+    <form id="search-box" novalidate>
+      <input type="search" id="search-beer" data-pattern-mismatch="Invalid input" required placeholder="Search beer..."
+        class="search-b" aria-label="search bar">
+      <button type="submit" class="button-s" id="searchbutton">Search <i class="fas fa-search"></i></button>
+    </form>
+    <form id="filter-box" novalidate>
+      <input type="number" id="filter" data-pattern-mismatch="Invalid input" require placeholdeR="Filter beers by year"
+        class="filter-bar">
+      <button type="submit" class="button-s">Filter <i class="far fa-calendar-alt"></i></button>
+    </form>
+  </div>
 
+  <main>
+  </main>
+  <div id="beerlist" class='row'></div>
+  <section id="details" class="detail-section"></section>
+
+  <!-- <button id='arrow-button' onClick='goUp()' title="arrow button up to top page">
+  <i class='fas fa-arrow-circle-up fa-lg'></i>
+</button> -->
+
+  <footer>
+    <div class="footer">
+      <p>Gema S. | 2020</p>
+      <a href="mailto:gema.segb@gmail.com" aria-label="Email"><i class="social-icon fas fa-envelope  fa-lg"></i></a>
+      <a href="https://github.com/gemasegarra" target="_blank" rel="noopener" aria-label="github"><i
+          class="social-icon fab fa-github  fa-lg"></i></a>
+      <a href="https://twitter.com/gemasega" target="_blank" rel="noopener" aria-label="twitter"><i
+          class="social-icon fab fa-twitter fa-lg"></i></a>
+    </div>
+  </footer>
+
+  <script type="module" src='/src/js/main.js'></script>
   <script type="module" src='/src/js/navbar.js'></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 </body>
 
 </html>
