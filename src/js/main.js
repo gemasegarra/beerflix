@@ -8,12 +8,10 @@ const { getItem } = storage(STORAGE_TYPE);
 
 
 page('/', () => {
-  renderBeersDOM(getItem(INPUT_STORAGE_ID)); 
-  console.log('Route /')
+  renderBeersDOM(getItem(INPUT_STORAGE_ID));
 });
 
 page('/detail/:id', (ctx) => {
-  console.log('Detail');
   const { params: { id } } = ctx;
   renderDetail(id);
 });

@@ -16,8 +16,6 @@ const apiCall = (API = 'https://beerflix-api.herokuapp.com/api/v1/beers') => {
           throw new Error('Error retrieving beers')
         }
         const data = await response.json();
-        console.log(data.beers);
-
         return data.beers
 
       } catch (err) {
@@ -38,7 +36,6 @@ const apiCall = (API = 'https://beerflix-api.herokuapp.com/api/v1/beers') => {
           throw new Error('Error retrieving beers')
         }
         const data = await response.json();
-        console.log(data.beer);
         return data.beer
 
       } catch (err) {
@@ -91,4 +88,4 @@ const apiCall = (API = 'https://beerflix-api.herokuapp.com/api/v1/beers') => {
   }
 };
 
-  export default apiCall;
+export default apiCall;

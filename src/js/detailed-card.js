@@ -1,6 +1,6 @@
 import api from './api.js';
 
-const detailedTemplate = ({beerId, name, image, description, firstBrewed, brewersTips, contributedBy, likes, price}) => {
+const detailedTemplate = ({ beerId, name, image, description, firstBrewed, brewersTips, contributedBy, likes, price }) => {
   return `
   <div class="detail-section">
   <div class="card" id="${beerId}">
@@ -21,7 +21,7 @@ const detailedTemplate = ({beerId, name, image, description, firstBrewed, brewer
 `
 };
 
-const commentTemplate = ({comment, date}) => {
+const commentTemplate = ({ comment, date }) => {
   return `<div class="container" id="comments">
     <p>${comment}</p>
     <p>${date}</p>
@@ -47,7 +47,7 @@ const commentsFormTemplate = `
 const { getDetails } = api();
 
 const renderDetail = async id => {
-  try { 
+  try {
     const detail = await getDetails(id);
     const template = detailedTemplate(detail);
     const mainSection = document.querySelector('main');
