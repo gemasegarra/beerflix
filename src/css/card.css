@@ -1,6 +1,8 @@
+/* BEER CARD */
+
 .row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   -webkit-column-gap: 40px;
   -moz-column-gap: 40px;
   column-gap: 40px;
@@ -8,41 +10,135 @@
   width: 80%;
 }
 
-/* OJITO con 500px se ve bien en pantalla grande, pero mal en móvil */
 
-
-.beer-card {
-  padding: 40px;
+.beer-card,
+.card {
+  padding: 20px;
   height: auto;
-  width: 100%;
+  width: 60%;
   display: flex;
   align-items: center;
-
 }
 
-.beercard {
+.beercard,
+.detail-section {
   margin-top: 20px;
 }
 
-.image-container {
+.comment-content {
+  width: 80%;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.image-container,
+.img-container {
   max-height: 10%;
   max-width: 10%;
 }
 
 .title-section {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-family: 'Anton', sans-serif;
   margin-bottom: 20px;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .description {
-  margin-left: 40px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column
 }
 
-.year {
-  margin-left: 40px;
+.year,
+.likebutton,
+.show-more-info,
+.brewersTips,
+.contributedBy,
+.likes,
+.price {
+  margin-left: 20px;
   margin-top: 30px;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+.heart-button {
+  display: inline-block !important;
+  font-size: 1rem;
+  font-family: 'Anton', sans-serif;
+  background-color: #ede59a;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.heart-button:hover {
+  color: red;
+}
+
+
+@media (min-width: 992px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+    column-gap: 40px;
+    margin: auto;
+    width: 80%;
+  }
+
+  .beer-card,
+  .card {
+    padding: 40px;
+    height: auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+  .title-section {
+    font-size: 3rem;
+  }
+  .comment-content {
+    width: 80%;
+    margin-left: 40px;
+    padding: 20px;
+  }
+
+  .image-container,
+  .img-container {
+    max-height: 10%;
+    max-width: 10%;
+  }
+
+  .title-section {
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 20px;
+    margin-left: 40px;
+  }
+
+  .description {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column
+  }
+
+  .year,
+  .likebutton,
+  .show-more-info,
+  .brewersTips,
+  .contributedBy,
+  .likes,
+  .price {
+    margin-left: 40px;
+    margin-top: 30px;
+  }
 }
