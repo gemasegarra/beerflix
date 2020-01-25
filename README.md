@@ -29,7 +29,7 @@ To run this project locally do the following:
 
 - Last search is saved via LocalStorage
 
-- Option to add likes to beers *coming soon*
+- Option to add likes to beers
 
 - Detailed page for every beer with more info and a comments section (not functional yet) 
 
