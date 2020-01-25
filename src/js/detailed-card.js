@@ -21,18 +21,17 @@ const detailedTemplate = ({beerId, name, image, description, firstBrewed, brewer
 `
 };
 
-const commentTemplate = ({comment, date}) => {`
-  <div class="container">
+const commentTemplate = ({comment, date}) => {
+  return `<div class="container" id="comments">
     <p>${comment}</p>
     <p>${date}</p>
-  </div>
-  `
+  </div> `
 }
 
 const commentsFormTemplate = `
 <div id="detail" class="comment-content">
 <div class="container">
-<h2>Comments</h2>
+<h2>Comments:</h2>
 <div id="commentslist">
 </div>
 </div>
@@ -49,9 +48,7 @@ const { getDetails } = api();
 
 const renderDetail = async id => {
   try { 
-    console.log('prueba')
     const detail = await getDetails(id);
-  
     const template = detailedTemplate(detail);
     const mainSection = document.querySelector('main');
     const comments = document.querySelector('#details');
