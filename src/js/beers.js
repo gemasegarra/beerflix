@@ -12,21 +12,24 @@ const beerTemplate = beer => {
   <div class="description">
     <h1 class="title-section" id="beer-name">${beer.name}</h1>
     <p class="description">${beer.description}</p>
-    <p class="year">First brewed: ${beer.firstBrewed}</p>
+    <p class="year">First brewed: ${beer.firstBrewed}. 
+    </p>
+    <p class="likebutton">Add to favourites: <button class="heart-button" id="heart"><i class="far fa-heart"></i></button></p>
     <p class="show-more-info">For more info click <a href="/detail/${beer.beerId}"> here!</a></p>
   </div>
 </div>
 </div>
 `};
 
-// add heart button 
-// add link to detailed page
-
 const renderBeers = (element, items) => {
   const htmlBeers = items.map(function (beer) {
     return beerTemplate(beer);
   }).join('');
+  const comments = document.querySelector('#details');
+  const mainSection = document.querySelector('main');
   element.innerHTML = htmlBeers;
+  comments.innerHTML = "";
+  mainSection.innerHTML = "";
 }
 
 const renderBeersDOM = async text => {
