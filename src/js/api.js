@@ -1,7 +1,7 @@
 const APIKEY = '9H66017-H8VMX7C-NY13E10-8RAY4SW';
 
 const apiCall = (API = 'https://beerflix-api.herokuapp.com/api/v1/beers') => {
-  const beersAPIEndPoint = `${API}?limit=10`
+  const beersAPIEndPoint = `${API}`
   return {
     getBeers: async text => {
       try {
