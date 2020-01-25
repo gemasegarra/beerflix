@@ -34,6 +34,7 @@ To run this project locally do the following:
 - Detailed page for every beer with more info and a comments section (not functional yet) 
 
 - Responsive design
+
 ![gif](https://github.com/gemasegarra/beerflix/blob/master/src/images/mobileversion.gif)
 
 ## Future improvements 
@@ -41,6 +42,7 @@ To run this project locally do the following:
 - Create a login page 
 - Add and show comments
 - Web accessibility and performance improvements
+- Design improvements
 
 ## Installing
 
