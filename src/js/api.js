@@ -63,7 +63,7 @@ const apiCall = (API = 'https://beerflix-api.herokuapp.com/api/v1/beers') => {
         console.error(err.message);
         throw err;
       }
-    },
+    }, // ! comments don't show and can't be added yet
 
     addLike: async (id) => {
       try {

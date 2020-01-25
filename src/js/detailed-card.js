@@ -13,6 +13,7 @@ const detailedTemplate = ({ beerId, name, image, description, firstBrewed, brewe
     <p class="year">First brewed: ${firstBrewed}</p>
     <p class="brewersTips">Brewer tip: '${brewersTips}'</p>
     <p class="contributedBy">Contributed by ${contributedBy}</p>
+    <p class="likebutton">Add like! <button class="heart-button" id="heart"><i class="far fa-heart"></i></button></p>
     <p class="likes">${likes} ❤️</p>
     <p class="price">Price ${price} 💵</p>
 </div>
@@ -21,12 +22,12 @@ const detailedTemplate = ({ beerId, name, image, description, firstBrewed, brewe
 `
 };
 
-const commentTemplate = ({ comment, date }) => {
+/* const commentTemplate = ({ comment, date }) => {
   return `<div class="container" id="comments">
     <p>${comment}</p>
     <p>${date}</p>
   </div> `
-}
+} */ // ! not working yet
 
 const commentsFormTemplate = `
 <div id="detail" class="comment-content">
@@ -43,8 +44,11 @@ const commentsFormTemplate = `
 </form>
 </div>
 </div>`
+// ! not functional yet
 
 const { getDetails } = api();
+const { addLike } = api();
+
 
 const renderDetail = async id => {
   try {
@@ -56,6 +60,11 @@ const renderDetail = async id => {
     beerList.innerHTML = "";
     comments.innerHTML = commentsFormTemplate;
     mainSection.innerHTML = template;
+    const likeButton = document.querySelector('#heart');
+    likeButton.addEventListener('click', async () => {
+      await addLike(id);
+      await renderDetail(id);
+    });
   }
   catch (err) {
     console.error(err);

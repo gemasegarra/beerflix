@@ -12,9 +12,6 @@ const beerTemplate = beer => {
   <div class="description">
     <h1 class="title-section" id="beer-name">${beer.name}</h1>
     <p class="description">${beer.description}</p>
-    <p class="year">First brewed: ${beer.firstBrewed}. 
-    </p>
-    <p class="likebutton">Add to favourites: <button class="heart-button" id="heart"><i class="far fa-heart"></i></button></p>
     <p class="show-more-info">For more info click <a href="/detail/${beer.beerId}"> here!</a></p>
   </div>
 </div>
