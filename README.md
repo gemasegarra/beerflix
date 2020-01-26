@@ -1,6 +1,6 @@
 # Beerflix
 
-> Find your favourite beer! 
+> *Find your favourite beer!* 
 
 ![img](https://github.com/gemasegarra/beerflix/blob/master/src/images/beerflix.png)
 
@@ -27,13 +27,19 @@ To run this project locally do the following:
 
 - Search bar to filter beers by text or date showing a maxium of 10 results 
 
-- Last search is saved via LocalStorage. When clicking on the Beerflix 🍺 logo localStorage data saved is removed
-
-- Option to add likes to beers
+- Results from last search are saved via LocalStorage. When clicking on the Beerflix 🍺 logo localStorage data saved is removed and complete list of beers is shown again
 
 - Detailed page for every beer with more info and a comments section (not functional yet) 
 
+- Option to add likes to beers
+
+![gif](https://github.com/gemasegarra/beerflix/blob/master/src/images/likes.gif)
+
+- Back to top arrow button
+
 - Responsive design
+
+![gif](https://github.com/gemasegarra/beerflix/blob/master/src/images/responsive.gif)
 
 ![gif](https://github.com/gemasegarra/beerflix/blob/master/src/images/mobileversion.gif)
 
@@ -46,7 +52,7 @@ To run this project locally do the following:
 
 #### Known bugs to fix 
 
-- Filter by year is not working properly at the moment. It should be throwing results that match the API value 'firstBrewed' but right now results match the beer 'name' or the beer 'description'.   
+- Filter by year is not working properly at the moment. It should be throwing results that match the API value 'firstBrewed' but right now results match beer 'name' or beer 'description'.   
 
 
 ## Built with 
