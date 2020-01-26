@@ -23,7 +23,6 @@ searchForm.addEventListener('submit', e => {
   }
 });
 
-
 filterForm.addEventListener('submit', e => {
   e.preventDefault();
   if (filterInput.validity.valid) {
@@ -31,3 +30,11 @@ filterForm.addEventListener('submit', e => {
     setItem(INPUT_STORAGE_ID, filterInput.value)
   }
 });
+
+// localStorage input is removed when clicking on logo button
+const logo = document.querySelector('.logo');
+logo.addEventListener('click', () => {
+  localStorage.removeItem(INPUT_STORAGE_ID)
+});
+
+
