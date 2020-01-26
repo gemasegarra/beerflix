@@ -23,11 +23,11 @@ To run this project locally do the following:
 
 ![gif](https://github.com/gemasegarra/beerflix/blob/master/src/images/beerflix.gif)
 
-- Main page shows a complete list of beers loaded from the API and some basic info (name, image, description and date of creation) about them
+- Main page shows a complete list of beers loaded from the API and some basic info (name, image, description) about them
 
-- Search bar to filter beers by text or date
+- Search bar to filter beers by text or date showing a maxium of 10 results 
 
-- Last search is saved via LocalStorage
+- Last search is saved via LocalStorage. When clicking on the Beerflix 🍺 logo localStorage data saved is removed
 
 - Option to add likes to beers
 
@@ -43,6 +43,11 @@ To run this project locally do the following:
 - Add and show comments
 - Web accessibility and performance improvements
 - Design improvements
+
+#### Known bugs to fix 
+
+- Filter by year is not working properly at the moment. It should be throwing results that match the API value 'firstBrewed' but right now results match the beer 'name' or the beer 'description'.   
+
 
 ## Built with 
 
